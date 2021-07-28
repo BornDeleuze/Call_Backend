@@ -13,24 +13,33 @@ Conversation.destroy_all
 
 User.create(username: "Kaia")
 Conversation.create(name: "TEST")
-Message.create(user_id: 1, conversation_id: 1, content: "HELLO WORLD!!")
+firstmessage = Message.create(user_id: 1, conversation_id: 1, content: "HELLO WORLD!!")
+
+
 
 20.times {
-  channel = Conversation.create(name: Faker::Movies::Hobbit.location )
+  Conversation.create(name: Faker::Movies::Hobbit.location )
 }
 
 
 30.times {
-  user = User.create(username: Faker::Movies::Hobbit.character )
+  User.create(username: Faker::Movies::Hobbit.character )
 }
 
 50.times {
   message = Message.create(
-    content: Faker::JapaneseMedia::StudioGhibli.quote ,
     user_id: Random.rand(30),
-    conversation_id: Random.rand(20)
+    conversation_id: Random.rand(20),
+    content: Faker::JapaneseMedia::StudioGhibli.quote
   )
 }
+
+sleep(0.5)
+messages = Message.all
+messages.each do |message| 
+  message.username= message.user.username
+  message.save
+end
 
 puts "yay done seeded"
 

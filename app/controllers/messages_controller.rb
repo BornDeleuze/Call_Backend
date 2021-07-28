@@ -18,6 +18,7 @@ class MessagesController < ApplicationController
     # binding.pry
     message = Message.new(message_params)
     conversation = Conversation.find(message_params[:conversation_id])
+    binding.pry
     if message.save
       serialized_data = ActiveModelSerializers::Adapter::Json.new(
         MessageSerializer.new(message)).serializable_hash
