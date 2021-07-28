@@ -5,5 +5,5 @@ This is a backend API for a chat application, written in ruby on the rails frame
 
 After installing dependencies with 
 ### bundle install
-, run the server with 
+run the server with 
 ### rails s
