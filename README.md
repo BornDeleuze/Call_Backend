@@ -1,24 +1,6 @@
-# README
+# Call
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is a backend API for a chat application, written in ruby on the rails framework, designed for use with this front end:
+### https://github.com/BornDeleuze/Call_Backend
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+After installing dependencies with 'bundle install', run the server with 'rails s'
