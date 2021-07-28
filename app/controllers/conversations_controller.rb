@@ -13,7 +13,7 @@ class ConversationsController < ApplicationController
 
   # POST /conversations
   def create
-    # binding.pry
+    
     @conversation = Conversation.new(conversation_params)
     if @conversation.save
       serialized_data = ActiveModelSerializers::Adapter::Json.new(

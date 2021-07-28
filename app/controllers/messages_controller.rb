@@ -15,10 +15,9 @@ class MessagesController < ApplicationController
 
   # POST /messages
   def create
-    # binding.pry
     message = Message.new(message_params)
     conversation = Conversation.find(message_params[:conversation_id])
-    binding.pry
+    message.username = message.user.username
     if message.save
       serialized_data = ActiveModelSerializers::Adapter::Json.new(
         MessageSerializer.new(message)).serializable_hash

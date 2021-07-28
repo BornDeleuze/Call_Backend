@@ -11,9 +11,9 @@ User.destroy_all
 Message.destroy_all
 Conversation.destroy_all
 
-User.create(username: "Kaia")
-Conversation.create(name: "TEST")
-firstmessage = Message.create(user_id: 1, conversation_id: 1, content: "HELLO WORLD!!")
+# User.create(username: "Kaia")
+# Conversation.create(name: "TEST")
+# firstmessage = Message.create(user_id: 1, conversation_id: 1, content: "HELLO WORLD!!")
 
 
 
